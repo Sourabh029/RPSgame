@@ -1,6 +1,8 @@
 let choices = document.querySelectorAll(".choice");
 let myScore = document.querySelector("#score1");
 let coScore = document.querySelector("#score2");
+let Pmsg= document.querySelector("#p-msg");
+let Cmsg= document.querySelector("#c-msg");
 let msg = document.querySelector("#msg");
 let myChoice = "";
 let myTurn = true;
@@ -22,7 +24,7 @@ for (let ch of choices) {
         msg.innerText = winner;
         myScore.innerText = yourScore;
         coScore.innerText = compScore;
-
+        Pmsg.innerText=myChoice;
 
 
 
@@ -39,7 +41,7 @@ let playComp = (turn) => {
         op = Math.floor(Math.random() * 3);
         myTurn = true;
     }
-
+    Cmsg.innerText=options[op];
     return options[op];
 
 }
